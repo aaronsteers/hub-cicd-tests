@@ -14,3 +14,5 @@ repo: https://github.com/singer-io/tap-gitlab
 domain_url:
 maintenance_status: unknown
 keywords: []
+prereqs: |
+  Before installing this tap, the `pytz` library needs to be pre-installed.
