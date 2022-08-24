@@ -48,10 +48,6 @@ def merge(a, b, path=None, update=True):
                             a[key].append(b[key][idx])
             elif update:
                 a[key] = b[key]
-            elif not update:
-                pass
-            else:
-                raise Exception("Conflict at %s" % ".".join(path + [str(key)]))
         else:
             a[key] = b[key]
     return a

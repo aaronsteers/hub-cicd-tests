@@ -10,9 +10,7 @@ DISCOVERY_VERSION = 19
 MELTANO_DIR = "_data/meltano/"
 DISCOVERY_FILE = "discovery.yml"
 
-discovery_dict: Dict[str, Any] = {}
-discovery_dict["version"] = DISCOVERY_VERSION
-
+discovery_dict: Dict[str, Any] = {"version": DISCOVERY_VERSION}
 for root, subdir, files in os.walk(MELTANO_DIR):
     meltano_type = re.sub(MELTANO_DIR, "", root)
     if meltano_type == "":

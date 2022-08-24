@@ -33,9 +33,7 @@ def connector_validate(connector_dir, job_fail):
 
 
 job_fail = connector_validate(TAP_DIR, job_fail)
-job_fail = connector_validate(TARGET_DIR, job_fail)
-
-if job_fail:
+if job_fail := connector_validate(TARGET_DIR, job_fail):
     print("Schema validation failed.")
     sys.exit(1)
 else:
